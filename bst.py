@@ -89,3 +89,54 @@ class BinarySearchTree(object):
                 return node.data
             else:
                 return self.get_max(node.right)
+
+    def getLeafCount(self,node):
+        if node is None:
+            return 0
+        if(node.left is None and node.right is None):
+            return 1
+        else:
+            return self.getLeafCount(node.left) + self.getLeafCount(node.right)
+
+
+    def isFullTree(self,node):
+ 
+        if self.root is None:   
+            return True
+        
+        if node.left is None and node.right is None:
+            return True
+    
+        if node.left is not None and node.right is not None:
+            return (self.isFullTree(node.left) and self.isFullTree(node.right))
+        
+        return False
+
+    
+
+    def findADepth(node):
+        d = 0
+        while (node != None):
+            d += 1
+            node = node.left
+        return d
+ 
+
+    def isPerfectRec(self,node, d, level = 0):
+        
+        if (self.root == None):
+            return True
+    
+        if (node.left == None and node.right == None):
+            return (d == level + 1)
+    
+        if (node.left == None or node.right == None):
+            return False
+    
+        return (self.isPerfectRec(node.left, d, level + 1) and
+                self.isPerfectRec(node.right, d, level + 1))
+    
+   
+    def isPerfect(self,node):
+        d = self.findADepth(node)
+        return self.isPerfectRec(node, d)
