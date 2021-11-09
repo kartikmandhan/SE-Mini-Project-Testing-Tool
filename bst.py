@@ -114,7 +114,7 @@ class BinarySearchTree(object):
 
     
 
-    def findADepth(node):
+    def findADepth(self,node):
         d = 0
         while (node != None):
             d += 1
@@ -140,3 +140,6 @@ class BinarySearchTree(object):
     def isPerfect(self,node):
         d = self.findADepth(node)
         return self.isPerfectRec(node, d)
+
+
+

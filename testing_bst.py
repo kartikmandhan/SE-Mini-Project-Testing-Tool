@@ -37,6 +37,15 @@ class BstTest(unittest.TestCase):
         self.tree.preorder(self.tree.get_root())
         print("Postorder Traversal: ")
         self.tree.postorder(self.tree.get_root())
+    
+    def test_leafCount(self):
+        self.assertEqual(self.tree.getLeafCount(self.tree.get_root()), 3)
+
+    def test_isFull(self):
+        self.assertFalse(self.tree.isFullTree(self.tree.get_root()))
+
+    def test_isPerfect(self):
+        self.assertFalse(self.tree.isPerfect(self.tree.get_root()))
 
 
 if __name__ == '__main__':
