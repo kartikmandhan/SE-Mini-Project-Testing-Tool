@@ -1,12 +1,12 @@
 
-class Node(object):
+class Node():
     def __init__(self, data=None, left=None, right=None):
         self.data = data
         self.left = left
         self.right = right
 
 
-class BinarySearchTree(object):
+class BinarySearchTree():
     def __init__(self, root=None):
         self.root = root
 
