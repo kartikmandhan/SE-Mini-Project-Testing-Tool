@@ -9,5 +9,5 @@ In this repository, we are creating a Binary Search Tree Data Structure and writ
 `python3 testing_bst.py`
 
 ### Authors
-- Kartik Mandha (111903039)
+- Kartik Mandhan (111903039)
 - Mudit Bapna (111903048)

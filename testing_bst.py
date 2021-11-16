@@ -13,6 +13,11 @@ class BstTest(unittest.TestCase):
         for x in self.arr:
             self.tree.iterative_insert(x)
 
+    def test_iterative_insert(self):
+        # check that insert fails when the duplicate value is inserted in bst
+        with self.assertRaises(ValueError):
+            self.tree.iterative_insert(100)
+
     def test_search(self):
         self.assertTrue(self.tree.search(self.tree.get_root(), 30))
         self.assertFalse(self.tree.search(self.tree.get_root(), 12312))

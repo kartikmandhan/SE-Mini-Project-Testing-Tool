@@ -25,12 +25,14 @@ class BinarySearchTree():
                         return
                     else:
                         nd = nd.left
-                else:
+                elif item > nd.data:
                     if nd.right is None:
                         nd.right = Node(item)
                         return
                     else:
                         nd = nd.right
+                else:
+                    raise ValueError("Duplicate Entry in Binary Search Tree")
 
     def search(self, node, item):
         if node is None:
