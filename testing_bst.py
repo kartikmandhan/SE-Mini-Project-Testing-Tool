@@ -7,7 +7,6 @@ from bst import Node, BinarySearchTree
 class BstTest(unittest.TestCase):
     # setup is the code called before running every test case
     def setUp(self):
-        # print("Setup")
         self.tree = BinarySearchTree()
         self.arr = [100, 20, 500, 30, 10, 40]
 
