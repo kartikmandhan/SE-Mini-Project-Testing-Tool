@@ -77,7 +77,7 @@ class BinarySearchTree():
 
     def get_min(self, node):
         if self.root is None:
-            return "Tree is empty."
+            raise ValueError("Tree is empty.")
         else:
             if node.left is None:
                 return node.data
@@ -86,7 +86,7 @@ class BinarySearchTree():
 
     def get_max(self, node):
         if self.root is None:
-            return "Tree is empty."
+            raise ValueError("Tree is empty.")
         else:
             if node.right is None:
                 return node.data
