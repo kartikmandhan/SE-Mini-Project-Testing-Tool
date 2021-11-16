@@ -1,3 +1,6 @@
+from unittest import result
+
+
 class Node(object):
     def __init__(self, data=None, left=None, right=None):
         self.data = data
@@ -136,18 +139,17 @@ class BinarySearchTree(object):
         d = self.findADepth(node)
         return self.isPerfectRec(node, d)
 
-    def BreadthFirstSearch(root):
-        if root is None:
+    def BreadthFirstSearch(self):
+        if self.root is None:
             return
-
+        result = ""
         queue = []
-
-        queue.append(root)
-
+        queue.append(self.root)
         while(len(queue) > 0):
-            print(queue[0].data)
+            result += str(queue[0].data)+" "
             node = queue.pop(0)
             if node.left is not None:
                 queue.append(node.left)
             if node.right is not None:
                 queue.append(node.right)
+        return result
